@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airtel - طلب القرض</title>
+    <title>Airtel - Demande de Prêt</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
@@ -43,7 +43,7 @@
             background: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        /* BACK BUTTON */
+        /* BOUTON RETOUR */
         
         .back-btn {
             font-size: 28px;
@@ -57,8 +57,6 @@
             align-items: center;
             justify-content: center;
             padding: 0;
-            transform: scaleX(-1);
-            /* Flips arrow for RTL */
         }
         /* LOGO */
         
@@ -78,14 +76,14 @@
             object-position: center;
             display: block;
         }
-        /* RIGHT SIDE SPACER */
+        /* ESPACEUR */
         
         .header-spacer {
             width: 40px;
             height: 40px;
         }
         /* =========================
-            MAIN CARD
+            CARTE PRINCIPALE
         ========================= */
         
         .card {
@@ -102,7 +100,7 @@
             margin-bottom: 10px;
         }
         /* =========================
-            FORM TITLE
+            TITRE DU FORMULAIRE
         ========================= */
         
         .form-title {
@@ -113,7 +111,7 @@
             color: #333;
         }
         /* =========================
-            PROGRESS BAR
+            BARRE DE PROGRESSION
         ========================= */
         
         .progress-bar {
@@ -128,10 +126,10 @@
         .progress-fill {
             width: 66%;
             height: 100%;
-            background: linear-gradient( to left, #4361ee, #7209b7);
+            background: linear-gradient( to right, #4361ee, #7209b7);
         }
         /* =========================
-            STEP TEXT
+            TEXTE DE L'ÉTAPE
         ========================= */
         
         .step-text {
@@ -141,7 +139,7 @@
             margin-bottom: 30px;
         }
         /* =========================
-            NAME GROUP
+            GROUPE NOM
         ========================= */
         
         .name-group {
@@ -154,7 +152,7 @@
             flex: 1;
         }
         /* =========================
-            FORM LABEL
+            LIBELLÉS
         ========================= */
         
         .form-label {
@@ -163,10 +161,10 @@
             color: #333;
             margin-bottom: 8px;
             font-size: 15px;
-            text-align: right;
+            text-align: left;
         }
         /* =========================
-            FORM INPUT
+            CHAMP DE SAISIE
         ========================= */
         
         .form-input {
@@ -177,7 +175,7 @@
             font-size: 16px;
             transition: border 0.3s;
             font-family: 'Tajawal', sans-serif;
-            text-align: right;
+            text-align: left;
             background: white;
         }
         
@@ -190,7 +188,7 @@
             border-color: #e74c3c !important;
         }
         /* =========================
-            PHONE GROUP
+            GROUPE TÉLÉPHONE
         ========================= */
         
         .phone-group {
@@ -203,7 +201,6 @@
             transition: border 0.3s;
             background: white;
             direction: ltr;
-            /* Keeps phone layout standard */
         }
         
         .phone-group.invalid {
@@ -233,7 +230,7 @@
             outline: none;
         }
         /* =========================
-            PHONE HELP TEXT
+            AIDE TÉLÉPHONE
         ========================= */
         
         .phone-help {
@@ -241,10 +238,10 @@
             display: block;
             margin-bottom: 30px;
             font-size: 13px;
-            text-align: right;
+            text-align: left;
         }
         /* =========================
-            BUTTON GROUP
+            GROUPE DE BOUTONS
         ========================= */
         
         .btn-group {
@@ -264,7 +261,7 @@
             cursor: pointer;
             transition: opacity 0.2s ease, transform 0.2s ease;
         }
-        /* PREVIOUS */
+        /* PRÉCÉDENT */
         
         .prev-btn {
             background: #eee;
@@ -274,7 +271,7 @@
         .prev-btn:hover {
             background: #e5e5e5;
         }
-        /* NEXT */
+        /* SUIVANT */
         
         .next-btn {
             background: linear-gradient( to right, #4361ee, #7209b7);
@@ -290,7 +287,7 @@
             transform: scale(0.98);
         }
         /* =========================
-            FOOTER
+            PIED DE PAGE
         ========================= */
         
         footer {
@@ -337,17 +334,17 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- EN-TÊTE -->
 
     <header>
 
-        <button class="back-btn" onclick="history.back()" aria-label="رجوع">
+        <button class="back-btn" onclick="history.back()" aria-label="Retour">
             ←
         </button>
 
         <div class="logo">
 
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKPIUOxpuuEY1j3YBezDsKGUqWQ8aZNoh7dFU4nzwiw&s=10" alt="أيرتل">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKPIUOxpuuEY1j3YBezDsKGUqWQ8aZNoh7dFU4nzwiw&s=10" alt="Airtel">
 
         </div>
 
@@ -356,16 +353,16 @@
     </header>
 
 
-    <!-- MAIN CONTENT -->
+    <!-- CONTENU PRINCIPAL -->
 
     <main class="card">
 
         <h1 class="form-title">
-            طلب القرض
+            Demande de Prêt
         </h1>
 
 
-        <!-- PROGRESS BAR -->
+        <!-- BARRE DE PROGRESSION -->
 
         <div class="progress-bar">
 
@@ -374,24 +371,24 @@
         </div>
 
 
-        <!-- STEP -->
+        <!-- ÉTAPE -->
 
         <div class="step-text">
-            الخطوة 2 من 3
+            Étape 2 sur 3
         </div>
 
 
-        <!-- FIRST AND LAST NAME -->
+        <!-- PRÉNOM ET NOM -->
 
         <div class="name-group">
 
             <div>
 
                 <label class="form-label" for="firstName">
-                    الاسم الأول
+                    Prénom
                 </label>
 
-                <input type="text" class="form-input" id="firstName" placeholder="محمد" autocomplete="given-name">
+                <input type="text" class="form-input" id="firstName" placeholder="Jean" autocomplete="given-name">
 
             </div>
 
@@ -399,29 +396,29 @@
             <div>
 
                 <label class="form-label" for="lastName">
-                    اسم العائلة
+                    Nom de famille
                 </label>
 
-                <input type="text" class="form-input" id="lastName" placeholder="عبد الله" autocomplete="family-name">
+                <input type="text" class="form-input" id="lastName" placeholder="Kabila" autocomplete="family-name">
 
             </div>
 
         </div>
 
 
-        <!-- EMAIL -->
+        <!-- E-MAIL -->
 
         <label class="form-label" for="email">
-            البريد الإلكتروني
+            Adresse e-mail
         </label>
 
-        <input type="email" class="form-input" id="email" placeholder="mohamed.abdallah@example.com" autocomplete="email" style="margin-bottom:24px;">
+        <input type="email" class="form-input" id="email" placeholder="jean.kabila@example.com" autocomplete="email" style="margin-bottom:24px;">
 
 
-        <!-- PHONE -->
+        <!-- TÉLÉPHONE -->
 
         <label class="form-label" for="phone">
-            رقم الهاتف
+            Numéro de téléphone
         </label>
 
 
@@ -437,21 +434,21 @@
 
 
         <small class="phone-help">
-            أدخل 8 أرقام (مثال: 99123456)
+            Entrez 8 chiffres (ex. : 99123456)
         </small>
 
 
-        <!-- BUTTONS -->
+        <!-- BOUTONS -->
 
         <div class="btn-group">
 
             <button class="prev-btn" onclick="history.back()">
-                السابق
+                Précédent
             </button>
 
 
             <button class="next-btn" id="nextBtn">
-                الخطوة التالية
+                Étape suivante
             </button>
 
         </div>
@@ -459,10 +456,10 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- PIED DE PAGE -->
 
     <footer>
-        © 2026 أيرتل. جميع الحقوق محفوظة.
+        © 2026 Airtel. Tous droits réservés.
     </footer>
 
 
@@ -470,8 +467,8 @@
 
     <script>
         /* =========================
-                            PRE-FILL SAVED DATA
-                         ========================= */
+            PRÉ-REMPLIR LES DONNÉES
+        ========================= */
 
         if (localStorage.getItem('firstName')) {
 
@@ -506,7 +503,7 @@
 
 
         /* =========================
-            NEXT BUTTON
+            BOUTON SUIVANT
         ========================= */
 
         document
@@ -541,7 +538,7 @@
                     .trim();
 
 
-                /* REMOVE PREVIOUS ERRORS */
+                /* SUPPRIMER LES ANCIENNES ERREURS */
 
                 document
                     .querySelectorAll(
@@ -557,7 +554,7 @@
                 let valid = true;
 
 
-                /* FIRST NAME */
+                /* PRÉNOM */
 
                 if (!firstName) {
 
@@ -569,7 +566,7 @@
                 }
 
 
-                /* LAST NAME */
+                /* NOM */
 
                 if (!lastName) {
 
@@ -581,7 +578,7 @@
                 }
 
 
-                /* EMAIL */
+                /* E-MAIL */
 
                 if (!email ||
                     !email.includes('@') ||
@@ -596,7 +593,7 @@
                 }
 
 
-                /* PHONE (Chad mobile numbers are typically 8 digits) */
+                /* TÉLÉPHONE (les numéros mobiles au Tchad font généralement 8 chiffres) */
 
                 if (!phone ||
                     phone.length !== 8 ||
@@ -611,14 +608,14 @@
                 }
 
 
-                /* SHOW VALIDATION ERROR */
+                /* AFFICHER L'ERREUR DE VALIDATION */
 
                 if (!valid) {
 
                     alert(
-                        'يرجى تعبئة جميع الحقول بشكل صحيح.\n\n' +
-                        '• يجب أن يكون البريد الإلكتروني صحيحاً\n' +
-                        '• يجب أن يتكون رقم الهاتف من 8 أرقام بالضبط'
+                        'Veuillez remplir tous les champs correctement.\n\n' +
+                        '• L\'adresse e-mail doit être valide\n' +
+                        '• Le numéro de téléphone doit contenir exactement 8 chiffres'
                     );
 
                     return;
@@ -626,8 +623,8 @@
 
 
                 /* =========================
-                    SAVE INFORMATION
-                 ========================= */
+                    ENREGISTRER LES INFORMATIONS
+                ========================= */
 
                 localStorage.setItem(
                     'firstName',
@@ -654,8 +651,8 @@
 
 
                 /* =========================
-                    NEXT PAGE
-                 ========================= */
+                    PAGE SUIVANTE
+                ========================= */
 
                 window.location.href =
                     'summary.html';
