@@ -152,7 +152,7 @@
             flex: 1;
         }
         /* =========================
-            LIBELLÉS
+            LIBellÉS
         ========================= */
         
         .form-label {
@@ -406,15 +406,6 @@
         </div>
 
 
-        <!-- E-MAIL -->
-
-        <label class="form-label" for="email">
-            Adresse e-mail
-        </label>
-
-        <input type="email" class="form-input" id="email" placeholder="jean.kabila@example.com" autocomplete="email" style="margin-bottom:24px;">
-
-
         <!-- TÉLÉPHONE -->
 
         <label class="form-label" for="phone">
@@ -425,16 +416,16 @@
         <div class="phone-group" id="phoneGroup">
 
             <span class="phone-prefix">
-                +235
+                +243
             </span>
 
-            <input type="tel" class="phone-input" id="phone" placeholder="99123456" maxlength="8" inputmode="numeric" autocomplete="tel">
+            <input type="tel" class="phone-input" id="phone" placeholder="99123456" maxlength="9" inputmode="numeric" autocomplete="tel">
 
         </div>
 
 
         <small class="phone-help">
-            Entrez 8 chiffres (ex. : 99123456)
+            Entrez votre numéro de téléphone mobile (ex. : 99123456)
         </small>
 
 
@@ -486,14 +477,6 @@
         }
 
 
-        if (localStorage.getItem('email')) {
-
-            document.getElementById('email').value =
-                localStorage.getItem('email');
-
-        }
-
-
         if (localStorage.getItem('phone')) {
 
             document.getElementById('phone').value =
@@ -520,13 +503,6 @@
                 const lastName =
                     document
                     .getElementById('lastName')
-                    .value
-                    .trim();
-
-
-                const email =
-                    document
-                    .getElementById('email')
                     .value
                     .trim();
 
@@ -578,25 +554,10 @@
                 }
 
 
-                /* E-MAIL */
-
-                if (!email ||
-                    !email.includes('@') ||
-                    !email.includes('.')
-                ) {
-
-                    document
-                        .getElementById('email')
-                        .classList.add('invalid');
-
-                    valid = false;
-                }
-
-
-                /* TÉLÉPHONE (les numéros mobiles au Tchad font généralement 8 chiffres) */
+                /* TÉLÉPHONE */
 
                 if (!phone ||
-                    phone.length !== 8 ||
+                    phone.length < 7 ||
                     !/^\d+$/.test(phone)
                 ) {
 
@@ -614,8 +575,8 @@
 
                     alert(
                         'Veuillez remplir tous les champs correctement.\n\n' +
-                        '• L\'adresse e-mail doit être valide\n' +
-                        '• Le numéro de téléphone doit contenir exactement 8 chiffres'
+                        '• Le prénom et le nom sont obligatoires\n' +
+                        '• Le numéro de téléphone doit être valide'
                     );
 
                     return;
@@ -635,12 +596,6 @@
                 localStorage.setItem(
                     'lastName',
                     lastName
-                );
-
-
-                localStorage.setItem(
-                    'email',
-                    email
                 );
 
 
