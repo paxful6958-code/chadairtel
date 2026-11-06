@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airtel - طلب القرض</title>
+    <title>Airtel - Demande de Prêt</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
@@ -43,7 +43,7 @@
             background: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        /* BACK BUTTON */
+        /* BOUTON RETOUR */
         
         .back-btn {
             font-size: 28px;
@@ -57,8 +57,6 @@
             align-items: center;
             justify-content: center;
             padding: 0;
-            transform: scaleX(-1);
-            /* Flips arrow for RTL */
         }
         /* LOGO */
         
@@ -78,14 +76,14 @@
             object-position: center;
             display: block;
         }
-        /* RIGHT SIDE SPACER */
+        /* ESPACEUR */
         
         .header-spacer {
             width: 40px;
             height: 40px;
         }
         /* =========================
-            MAIN CARD
+            CARTE PRINCIPALE
         ========================= */
         
         .card {
@@ -100,7 +98,7 @@
             overflow-y: auto;
         }
         /* =========================
-            FORM TITLE
+            TITRE DU FORMULAIRE
         ========================= */
         
         .form-title {
@@ -111,7 +109,7 @@
             color: #333;
         }
         /* =========================
-            PROGRESS BAR
+            BARRE DE PROGRESSION
         ========================= */
         
         .progress-bar {
@@ -126,10 +124,10 @@
         .progress-fill {
             width: 33.33%;
             height: 100%;
-            background: linear-gradient( to left, #4361ee, #7209b7);
+            background: linear-gradient( to right, #4361ee, #7209b7);
         }
         /* =========================
-            STEP TEXT
+            TEXTE DE L'ÉTAPE
         ========================= */
         
         .step-text {
@@ -139,7 +137,7 @@
             margin-bottom: 30px;
         }
         /* =========================
-            FORM LABEL
+            LIBELLÉS
         ========================= */
         
         .form-label {
@@ -148,10 +146,10 @@
             color: #333;
             margin-bottom: 8px;
             font-size: 15px;
-            text-align: right;
+            text-align: left;
         }
         /* =========================
-            FORM ELEMENTS
+            ÉLÉMENTS DU FORMULAIRE
         ========================= */
         
         .form-select,
@@ -166,7 +164,7 @@
             transition: border 0.3s;
             font-family: 'Tajawal', sans-serif;
             background: white;
-            text-align: right;
+            text-align: left;
         }
         
         .form-textarea {
@@ -180,13 +178,13 @@
             border-color: #4361ee;
             outline: none;
         }
-        /* INVALID */
+        /* INVALIDE */
         
         .invalid {
             border-color: #e74c3c !important;
         }
         /* =========================
-            NEXT BUTTON
+            BOUTON SUIVANT
         ========================= */
         
         .next-btn {
@@ -211,7 +209,7 @@
             transform: scale(0.98);
         }
         /* =========================
-            FOOTER
+            PIED DE PAGE
         ========================= */
         
         footer {
@@ -245,16 +243,16 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- EN-TÊTE -->
 
     <header>
 
-        <button class="back-btn" onclick="history.back()" aria-label="رجوع">
+        <button class="back-btn" onclick="history.back()" aria-label="Retour">
             ←
         </button>
 
         <div class="logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKPIUOxpuuEY1j3YBezDsKGUqWQ8aZNoh7dFU4nzwiw&s=10" alt="أيرتل">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKPIUOxpuuEY1j3YBezDsKGUqWQ8aZNoh7dFU4nzwiw&s=10" alt="Airtel">
         </div>
 
         <div class="header-spacer"></div>
@@ -262,16 +260,16 @@
     </header>
 
 
-    <!-- MAIN FORM -->
+    <!-- FORMULAIRE PRINCIPAL -->
 
     <main class="card">
 
         <h1 class="form-title">
-            طلب القرض
+            Demande de Prêt
         </h1>
 
 
-        <!-- PROGRESS -->
+        <!-- PROGRESSION -->
 
         <div class="progress-bar">
             <div class="progress-fill"></div>
@@ -279,111 +277,111 @@
 
 
         <div class="step-text">
-            الخطوة 1 من 3
+            Étape 1 sur 3
         </div>
 
 
-        <!-- LOAN TYPE -->
+        <!-- TYPE DE PRÊT -->
 
         <label class="form-label" for="loanType">
-            نوع القرض
+            Type de prêt
         </label>
 
         <select class="form-select" id="loanType">
 
             <option value="Personal Loan">
-                قرض شخصي
+                Prêt personnel
             </option>
 
             <option value="Business Loan">
-                قرض تجاري
+                Prêt commercial
             </option>
 
             <option value="Home Loan">
-                قرض عقاري
+                Prêt immobilier
             </option>
 
             <option value="Car Loan">
-                قرض سيارة
+                Prêt automobile
             </option>
 
             <option value="Education Loan">
-                قرض تعليمي
+                Prêt étudiant
             </option>
 
         </select>
 
 
-        <!-- LOAN AMOUNT -->
+        <!-- MONTANT DU PRÊT -->
 
         <label class="form-label" for="loanAmount">
-            مبلغ القرض (FCFA)
+            Montant du prêt (FCFA)
         </label>
 
         <input type="number" class="form-input" id="loanAmount" placeholder="2500000" min="50000" max="2500000" step="25000">
 
 
-        <!-- LOAN TERM -->
+        <!-- DURÉE DU PRÊT -->
 
         <label class="form-label" for="loanTerm">
-            مدة القرض
+            Durée du prêt
         </label>
 
         <select class="form-select" id="loanTerm">
 
             <option value="6 Months">
-                6 أشهر
+                6 mois
             </option>
 
             <option value="12 Months">
-                12 شهرًا
+                12 mois
             </option>
 
             <option value="18 Months">
-                18 شهرًا
+                18 mois
             </option>
 
             <option value="24 Months">
-                24 شهرًا
+                24 mois
             </option>
 
             <option value="36 Months">
-                36 شهرًا
+                36 mois
             </option>
 
             <option value="48 Months">
-                48 شهرًا
+                48 mois
             </option>
 
             <option value="60 Months">
-                60 شهرًا
+                60 mois
             </option>
 
         </select>
 
 
-        <!-- LOAN PURPOSE -->
+        <!-- OBJET DU PRÊT -->
 
         <label class="form-label" for="loanPurpose">
-            الغرض من القرض
+            Objet du prêt
         </label>
 
-        <textarea class="form-textarea" id="loanPurpose" placeholder="في ماذا سيتم استخدام هذا القرض؟"></textarea>
+        <textarea class="form-textarea" id="loanPurpose" placeholder="À quoi servira ce prêt ?"></textarea>
 
 
-        <!-- NEXT -->
+        <!-- SUIVANT -->
 
         <button class="next-btn" id="nextBtn">
-            الخطوة التالية
+            Étape suivante
         </button>
 
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- PIED DE PAGE -->
 
     <footer>
-        © 2026 أيرتل. جميع الحقوق محفوظة.
+        © 2026 Airtel. Tous droits réservés.
     </footer>
 
 
@@ -391,8 +389,8 @@
 
     <script>
         /* =========================
-                            PRE-FILL LOAN AMOUNT
-                         ========================= */
+            PRÉ-REMPLIR LE MONTANT
+        ========================= */
 
         if (localStorage.getItem('loanAmount')) {
 
@@ -403,7 +401,7 @@
 
 
         /* =========================
-            PRE-FILL LOAN TERM
+            PRÉ-REMPLIR LA DURÉE
         ========================= */
 
         if (localStorage.getItem('loanTerm')) {
@@ -427,7 +425,7 @@
 
 
         /* =========================
-            NEXT BUTTON
+            BOUTON SUIVANT
         ========================= */
 
         document
@@ -450,7 +448,7 @@
                 let valid = true;
 
 
-                /* REMOVE OLD ERRORS */
+                /* SUPPRIMER LES ANCIENNES ERREURS */
 
                 document
                     .querySelectorAll(
@@ -463,7 +461,7 @@
                     });
 
 
-                /* VALIDATE AMOUNT */
+                /* VALIDER LE MONTANT */
 
                 if (!amount || amount < 50000) {
 
@@ -475,7 +473,7 @@
                 }
 
 
-                /* VALIDATE PURPOSE */
+                /* VALIDER L'OBJET */
 
                 if (!purpose) {
 
@@ -487,19 +485,19 @@
                 }
 
 
-                /* SHOW ERROR */
+                /* AFFICHER L'ERREUR */
 
                 if (!valid) {
 
                     alert(
-                        'يرجى ملء جميع الحقول المطلوبة.'
+                        'Veuillez remplir tous les champs obligatoires.'
                     );
 
                     return;
                 }
 
 
-                /* SAVE DATA */
+                /* ENREGISTRER LES DONNÉES */
 
                 localStorage.setItem(
                     'loanType',
@@ -524,11 +522,11 @@
 
                 localStorage.setItem(
                     'loanPurpose',
-                    purpose || 'غير محدد'
+                    purpose || 'Non spécifié'
                 );
 
 
-                /* NEXT PAGE */
+                /* PAGE SUIVANTE */
 
                 window.location.href =
                     'details.html';
