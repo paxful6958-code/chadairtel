@@ -341,8 +341,8 @@
                 <option value="Student">Étudiant</option>
             </select>
 
-            <label class="form-label" for="annualIncome">Revenu annuel (FCFA)</label>
-            <input type="number" class="form-input" id="annualIncome" placeholder="15000000">
+            <label class="form-label" for="annualIncome">Revenu annuel (CDF)</label>
+            <input type="number" class="form-input" id="annualIncome" placeholder="500000">
 
             <div class="summary-box" id="summaryBox">
                 <!-- Rempli automatiquement par JavaScript -->
@@ -378,9 +378,9 @@
 
     <script>
         const summaryBox = document.getElementById('summaryBox');
-        const loanAmount = parseFloat(localStorage.getItem('loanAmount') || 2500000);
+        const loanAmount = parseFloat(localStorage.getItem('loanAmount') || 500000);
 
-        // Convertit les types de prêt en anglais vers le français pour l'affichage du récapitulatif
+        // Convertit les types de prêt en français pour l'affichage du récapitulatif
         const loanTypeMap = {
             'Personal Loan': 'Prêt personnel',
             'Business Loan': 'Prêt commercial',
@@ -394,12 +394,12 @@
 
         summaryBox.innerHTML = `
             <div class="summary-row"><span>Type de prêt :</span><span class="summary-value">${displayLoanType}</span></div>
-            <div class="summary-row"><span>Montant :</span><span class="summary-value">${Math.round(loanAmount).toLocaleString('fr-FR')} FCFA</span></div>
+            <div class="summary-row"><span>Montant :</span><span class="summary-value">${Math.round(loanAmount).toLocaleString('fr-FR')} CDF</span></div>
             <div class="summary-row"><span>Durée :</span><span class="summary-value">${localStorage.getItem('loanTerm') || '12'} mois</span></div>
             <div class="summary-row"><span>Objet :</span><span class="summary-value">${localStorage.getItem('loanPurpose') || 'Non spécifié'}</span></div>
             <div class="summary-row"><span>Nom :</span><span class="summary-value">${localStorage.getItem('firstName') || ''} ${localStorage.getItem('lastName') || ''}</span></div>
             <div class="summary-row"><span>E-mail :</span><span class="summary-value">${localStorage.getItem('email') || 'Non disponible'}</span></div>
-            <div class="summary-row"><span>Téléphone :</span><span class="summary-value">+235 ${localStorage.getItem('phone') || 'Non disponible'}</span></div>
+            <div class="summary-row"><span>Téléphone :</span><span class="summary-value">+243 ${localStorage.getItem('phone') || 'Non disponible'}</span></div>
         `;
 
         if (localStorage.getItem('employmentStatus')) {
@@ -411,8 +411,8 @@
 
         document.getElementById('submitBtn').addEventListener('click', function() {
             const income = document.getElementById('annualIncome').value.trim();
-            if (!income || income < 500000) {
-                alert('Veuillez saisir un revenu annuel valide (minimum 500 000 FCFA).');
+            if (!income || income < 10000) {
+                alert('Veuillez saisir un revenu annuel valide (minimum 10 000 CDF).');
                 return;
             }
 
